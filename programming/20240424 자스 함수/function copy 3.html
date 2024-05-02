@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>아</h1>
+  </div>
+  <script>
+    let root = window.document.getElementById('root');
+    
+
+    console.dir(root);
+    
+
+    function plus(one, two, three) {
+      if(one === 2){
+        one = "2입니다";
+        root.children[0].textContent = one;
+        root.children[0].style.color = "blue"; 
+      } else{
+        root.children[0].textContent = one + two + three;
+        root.children[0].style.color = "red";
+      }
+      plus(10,10,3);
+    }
+    
+
+    
+
+    // let str = root.children[0].innerHTML;
+    // console.log(typeof str);
+
+    // let num = Number(str);
+
+    // console.log(typeof num);
+
+  </script>
+</body>
+</html>

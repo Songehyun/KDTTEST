@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="white"></div>
+    <div id="black"></div>
+  </div>
+  <script>
+
+    
+    let root = window.document.getElementById('root');
+    let white = window.document.getElementById('white');
+    let black = window.document.getElementById('black');
+    console.log(root, white, black);
+    console.dir(white);
+    
+
+
+
+
+
+
+    white.innerHTML = "white";
+    white.style.width = "300px";
+    white.style.height = "300px";
+    white.style.backgroundColor = "#999999";
+
+
+    function whitecontrol() {
+      white.style.display = "none";
+    }
+
+    white.addEventListener('click', whitecontrol);
+
+
+
+    black.innerHTML = "black";
+    black.style.width = "300px";
+    black.style.height = "300px";
+    black.style.backgroundColor = "#ACBCDC";
+
+    function blackcontrol() {
+      white.style.display = "block"
+      white.style.width = "100vw";
+      white.style.height = "100vh";
+    }
+
+    black.addEventListener('click', blackcontrol);
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

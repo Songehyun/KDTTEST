@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="black"></div>
+    <div id="white"></div>
+  </div>
+  <script>
+    let root = document.getElementById('root');
+    let white = document.getElementById('white');
+    let black = document.getElementById('black');
+
+    white.innerHTML = "화이트모드";
+    white.style.display = "flex";
+    white.style.justifyContent = "center";
+    white.style.alignItems = "center";
+    white.style.width = "100vw";
+    white.style.height = "100vh";
+
+
+    function blackmode() {
+      black.style.backgroundColor = "#101010";
+      black.style.color = "white";
+      black.innerHTML = "다크모드";
+      black.style.display = "flex";
+      black.style.justifyContent = "center";
+      black.style.alignItems = "center";
+      black.style.width = "100vw";
+      black.style.height = "100vh";
+      white.style.display = "none";
+    }
+
+    function whitemode() {
+      // black.style.backgroundColor = "#101010";
+      // black.style.color = "white";
+      white.innerHTML = "화이트모드";
+      white.style.display = "flex";
+      white.style.justifyContent = "center";
+      white.style.alignItems = "center";
+      white.style.width = "100vw";
+      white.style.height = "100vh";
+      black.style.display = "none";
+    }
+
+    white.addEventListener('click', blackmode);
+    black.addEventListener('click', whitemode);
+
+
+  </script>
+</body>
+</html>

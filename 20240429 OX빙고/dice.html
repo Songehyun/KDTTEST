@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+
+    let diceimg = [
+      "/img/1.png",
+      "/img/2.png",
+      "/img/3.png",
+      "/img/4.png",
+      "/img/5.png",
+      "/img/6.png"
+    ]
+
+
+
+    let root = document.getElementById('root');
+    root.style.display = "flex";
+    root.style.flexDirection = "column";
+    root.style.alignItems = "center";
+    
+    let div1 = document.createElement('div');
+    root.appendChild(div1);
+    let div2 = document.createElement('div');
+    root.appendChild(div2);
+
+    
+    let button = document.createElement('button');
+    button.style.width = "10vw";
+    button.style.height = "5vh";
+    button.innerHTML = "Roll"
+    div2.appendChild(button);
+    
+    let makeimg = document.createElement('img');
+    div1.appendChild(makeimg);
+    
+    const dice = document.querySelector('img');
+    dice.src = diceimg[0];
+    dice.style.width = "15vw";
+    dice.style.height = "20vh";
+
+    function random() {
+      dice.src = diceimg[Math.floor(Math.random() * diceimg.length)]
+    }
+
+    button.addEventListener('click', random)
+  </script>
+</body>
+</html>

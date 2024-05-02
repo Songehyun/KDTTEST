@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function work(inputmoonza) {
+    let damza = "";
+    // let check = true;
+    let space = " ";
+
+    for (let i = 0;  i < inputmoonza.length; i++){
+      if(inputmoonza[i] !== space){
+        // if(check === true){
+          damza = damza + inputmoonza[i];
+        } else {
+          // if (inputmoonza[i] !== space) {
+          damza = damza + inputmoonza[i];
+        // }
+      // }
+    }
+  }
+    return damza;
+  }
+
+  const moonza = "성공은 결과이지 목적이 아니다. 목적은 당신이 무엇을 하느냐이다.";
+  const trimoonza = work(moonza);
+  console.log(trimoonza);
+
+  </script>
+</body>
+</html>

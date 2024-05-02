@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+</head>
+<style>
+  :root{
+    --bgblack: black;
+    --coblack: black;
+    --bggray: gray;
+    --cogray: gray;
+    --bgd4: #fafafc;
+    --cod4: #d4d4d4;
+  }
+
+
+  /* div전체를 포함하고 있습니다 */
+  #homepage{
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+  }
+  /* 언어가 다를 경우 발생하는 팝업의 설정입니다 팝업창의 양쪽 1fr은 스타일을 부여하지 않았습니다*/
+  #popuplang{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    width: 95vw;
+    height: 5vh;
+    background-color: var(--bgd4);
+  }
+  /* 언어가 다를 경우 발생하는 팝업의 내용입니다 */
+  #homepage > #popuplang > .popupcontent {
+    display: grid;
+    grid-template-columns: 9fr 2fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 언어 팝업중 설명글에 관한 스타일입니다 */
+  #homepage > #popuplang > .popupcontent > div:nth-child(1){
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepage > #popuplang > .popupcontent > div:nth-child(1) > p:nth-child(1){
+    display: flex;
+    font-size: 1em;
+  }
+  /* 언어 팝업중 선택박스에 관한 스타일입니다 */
+  #homepage > #popuplang > .popupcontent > div:nth-child(2){
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepage > #popuplang > .popupcontent > div:nth-child(2) > select:nth-child(1){
+    display: flex;
+    height: 3vh;
+    font-size: 1em;
+    align-content: center;
+  }
+  /* 언어 팝업중 컨티뉴 버튼에 관한 스타일입니다 */
+  #homepage > #popuplang > .popupcontent > div:nth-child(3){
+    display: flex;
+    height: 3vh;
+    width: 5vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1f;
+    color: #FFFFFF;
+    border-radius: 10px;
+  }
+  #homepage > #popuplang > .popupcontent > div:nth-child(3) > p:nth-child(1){
+    display: flex;
+    font-size: 1em;
+  }
+  /* 언어 팝업중 닫기 버튼에 관한 스타일입니다 */
+  #homepage > #popuplang > .popupcontent > div:nth-child(4){
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
+  #homepage > #popuplang > .popupcontent > div:nth-child(4) > p:nth-child(1){
+    display: flex;
+    font-size: 1em;
+  }
+
+
+  /* 언어 팝업창, 스타일 종료 */
+
+
+/* 메뉴바의 전체 스타일입니다. 왼쪽과 오른쪽 1fr은 스타일을 부여하지 않았습니다 */
+#menubar{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: var(--bgblack);
+  width: 95vw;
+  height: 4vh;
+}
+/* 메뉴바 안의 컨텐츠의 개수를 지정할 수 있는 그리드입니다. */
+#menubar > .menucontent{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.4fr 1fr /* 왼쪽 10개 */ 1fr 1fr 1fr;
+  background-color: var(--bgblack);
+  color: var(--cod4);
+  height: 4vh;
+  font-size: 1em;
+  align-content: center;
+}
+/* 각각의 메뉴에 - 같은 내용은 한번에 */
+/* #menubar > .menucontent > div:nth-child(1){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(3){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(4){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(5){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(6){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(7){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(8){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(9){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(10){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(11){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(12){
+  display: flex;
+  align-items: center;
+}
+#menubar > .menucontent > div:nth-child(13){
+  display: flex;
+  align-items: center;
+}
+ */
+
+/* 메뉴, 스타일 종료 */
+
+
+/* 메뉴바 아래의 광고 팝업입니다. 왼쪽 오른쪽 1fr은 컨텐츠 투입 가능합니다. 스타일미지정 */
+#popupad{
+    display: grid;
+    grid-template-columns: 3fr 5fr 3fr;
+    height: 7vh;
+    background-color: var(--bggray);
+}
+/* 메뉴바 아래 광고의 광고 문구와 링크입니다. */
+#popupad > div:nth-child(2){
+  display: flex;
+  font-size: 1em;
+  height: 7vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 메뉴바 아래 광고, 스타일 종료 */
+
+
+/* 신제품의 대표 이미지, 간단한 설명과 링크 */
+#newproduct{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: var(--bgblack);
+  height: 100vh;
+}
+#newproduct > div:nth-child(2){
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+/* 신제품의 대표 이미지 스타일 */
+#newproduct > div:nth-child(2) > div:nth-child(1){
+  background-color: var(--bggray);
+  height: 55vh;
+  width: 40vw;
+  text-align: center;
+  align-content: center;
+  color: var(--cod4);
+  font-size: 1.5em;
+}
+/* 신제품의 설명과 링크 스타일 */
+#newproduct > div:nth-child(2) > div:nth-child(2){
+  background-color: var(--bgblack);
+  text-align: center;
+  color: var(--cod4);
+  font-size: 1em;
+}
+
+
+/* 신제품의 설명과 링크, 스타일 종료 */
+
+
+#newpdvideo{
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  height: 80vh;
+  background-color: var(--bggray);
+  justify-content: center;
+}
+#newpdvideo > div:nth-child(2){
+  display: grid;
+  grid-template-columns: 0fr 4fr 0fr;
+}
+#newpdvideo > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#newpdvideo > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  width: 50%;
+  color: var(--cod4);
+  font-size: 1.5em;
+}
+#newpdvideo > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1){
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+#newpdvideo > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  width: 50%;
+  color: var(--cod4);
+  font-size: 1em;
+  justify-content: end;
+}
+#newpdvideo > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > p:nth-child(1){
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+#newpdvideo > div:nth-child(3){
+  display: flex;
+  height: 50vh;
+  width: 50vw;
+  background-color: var(--bgblack);
+  color: var(--cod4);
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 슬라이드 비디오, 스타일 종료 */
+
+
+/* 신제품 색상 비교 이미지 슬라이드 스타일입니다. */
+#newpdcolor{
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  background-color: var(--bgblack);
+  justify-content: center;
+}
+#newpdcolor > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+}
+/* 색상 비교 이미지 슬라이드 설명글 */
+#newpdcolor > div:nth-child(2) > div:nth-child(2){
+  font-size: 1.5em;
+  color: var(--cod4);
+  margin-left: -5vw;
+}
+/* 색상 비교 이미지 슬라이드 입니다 */
+#newpdcolor > div:nth-child(2) > div:nth-child(3){
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  background-color: var(--bggray);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+
+/* 색상 비교 이미지 슬라이드, 스타일 종료 */
+
+
+/* 신제품 케이스 소개 스타일 */
+#newpdcase{
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  height: 200vh;
+  background-color: var(--bggray);
+}
+/* 신제품 케이스 소개 메인 제목부분 */
+#newpdcase > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+#newpdcase > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  font-size: 2em;
+  width: 80vw;
+}
+/* 케이스 소개 메인 컨텐츠 */
+#newpdcase > div:nth-child(2){
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background-color: var(--bggray);
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 130vh;
+}
+/* 케이스 소개 메인 컨텐츠 한줄 설명 */
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  font-size: 1.5em;
+}
+/* 케이스 소개 이미지 */
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
+  display: grid;
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 50vh;
+  background-color: var(--bgblack);
+  margin-bottom: 2.5%;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  width: 30vw;
+  background-color: var(--bgblack);
+  margin-right: 1.25%;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  width: 30vw;
+  background-color: var(--bgblack);
+  margin-left: 1.25%;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+/* 케이스 설명 1과 2 */
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  width: 30%;
+  font-size: 1em;
+}
+#newpdcase > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  width: 30%;
+  font-size: 1em;
+}
+/* 이미지 자세한 소개 및 링크 */
+#newpdcase > div:nth-child(3){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newpdcase > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgd4);
+  font-size: 1em;
+  height: 5vh;
+  width: 20vw;
+}
+
+
+/* 신제품 케이스 소개, 스타일 종료 */
+
+
+/* 신제품 Pro 칩 소개 */
+#newpdchip{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 150vh;
+  background-color: var(--bgblack);
+}
+#newpdchip > div:nth-child(2){
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 4fr 2fr;
+  height: 140vh;
+  background-color: var(--bgblack);
+}
+#newpdchip > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  background-color: var(--bggray);
+  height: 3vh;
+  width: 20vw;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  background-color: var(--bggray);
+  height: 10vh;
+  width: 5vw;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgblack);
+  text-align: center;
+  color: var(--cod4);
+}
+#newpdchip > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > p:nth-child(1){
+  display: flex;
+  font-size: 1.5em;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > p:nth-child(2){
+  display: flex;
+  font-size: 1em;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(4){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(4) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  width: 50vw;
+  height: 60vh;
+  background-color: var(--bggray);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  color: var(--cogray);
+  font-size: 1em;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(5){
+  display: flex;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(5) > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  height: 10vh;
+  align-items: baseline;
+  justify-content: space-around;
+  color: var(--cod4);
+}
+#newpdchip > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  width: 40%;
+  height: 90%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 90%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdchip > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > p{
+  display: flex;
+  margin: 1px;
+}
+
+/* 신제품 칩 소개, 스타일 종료 */
+
+
+#newpdcam{
+  display: flex;
+  flex-direction: column;
+  height: 150vh;
+  background-color: var(--bgblack);
+  align-items: center;
+  justify-content: center;
+}
+#newpdcam > div:nth-child(1){
+  display: flex;
+  height: 5vh;
+  width: 10vw;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+}
+#newpdcam > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 30vw;
+  color: var(--cod4);
+}
+#newpdcam > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  font-size: 2em;
+}
+#newpdcam > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  font-size: 1em;
+}
+#newpdcam > div:nth-child(3){
+  display: flex;
+  height: 50vh;
+  width: 50vw;
+  background-color: var(--bggray);
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+#newpdcam > div:nth-child(4){
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: var(--cod4);
+}
+#newpdcam > div:nth-child(5){
+  display: flex;
+  height: 20%;
+  width: 50%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+}
+
+#camend{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgblack);
+}
+#camend > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  height: 60vw;
+  color: var(--cod4);
+  align-items: center;
+  justify-content: center;
+}
+#camend > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  width: 45%;
+  margin-right: 2.5%;
+  height: 90%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#camend > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  width: 45%;
+  margin-left: 2.5%;
+  height: 90%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#camend > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+}
+#camend > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+}
+#camend > div:nth-child(3) > div:nth-child(1) > hr{
+  color: var(--cogray);
+  width: 90%;
+}
+#camend > div:nth-child(3) > div:nth-child(2){
+  display: flex;
+  color: var(--cod4);
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+#camend > div:nth-child(3) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 신제품 카메라소개1 , 스타일 완료 */
+
+
+/* 신제품 줌업 스타일입니다. */
+
+#newpdzoom{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 120vw;
+  background-color: var(--bgblack);
+}
+#newpdzoom > div:nth-child(2){
+  display: grid;
+  grid-template-rows: 1fr 0fr 2fr 4fr 2fr;
+  height: 120vw;
+  background-color: var(--bgblack);
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  background-color: var(--bggray);
+  height: 30%;
+  width: 30%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgblack);
+  height: 90%;
+  width: 40%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > p:nth-child(1){
+  display: flex;
+  font-size: 1.5em;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(4){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(4) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  width: 90%;
+  height: 80%;
+  background-color: var(--bggray);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  width: 90%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+  color: var(--cogray);
+  font-size: 1em;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(5){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(5) > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  width: 40%;
+  height: 90%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 90%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdzoom > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > p{
+  display: flex;
+  margin: 1px;
+}
+
+
+/* 신제품 망원 파고들기, 스타일 종료 */
+
+
+
+/* 즐겨쓰는 동작, 스타일 */
+#newpdbmark{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bgblack);
+}
+#newpdbmark > div:nth-child(1){
+  display: flex;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+#newpdbmark > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 20vh;
+  width: 40%;
+  font-size: 1.5em;
+  color: var(--cod4);
+}
+#newpdbmark > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  height: 40vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbmark > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 40%;
+  justify-content: center;
+}
+#newpdbmark > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  color: var(--cod4);
+  font-size: 1.5em;
+  justify-content: center;
+}
+#newpdbmark > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  color: var(--cod4);
+  font-size: 1.5em;
+}
+#newpdbmark > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > hr{
+  display: flex;
+  width: 40vw;
+}
+#newpdbmark > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  height: 40vh;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+  font-size: 1.5em;
+}
+#newpdbmark > div:nth-child(3){
+  display: flex;
+  height: 20vh;
+  color: var(--cod4);
+  align-items: center;
+  justify-content: center;
+}
+#newpdbmark > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+}
+#newpdbmark > div:nth-child(3) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 10vh;
+  width: 20vw;
+}
+#newpdbmark > div:nth-child(3) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 10vh;
+  width: 20vw;
+}
+
+
+/* 즐겨쓰는 동작 , 스타일 종료 */
+
+
+#newpdlink {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background-color: var(--bgblack);
+}
+#newpdlink > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 5vh;
+  width: 10%;
+  color: var(--cod4);
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  height: 15vh;
+  width: 30%;
+  color: var(--cod4);
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  height: 30vh;
+  width: 50%;
+  background-color: var(--bggray);
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(4){
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(4) > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--cod4);
+}
+#newpdlink > div:nth-child(4) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 10vh;
+  width: 30%;
+  font-size: 0.8vw;
+  align-items: center;
+  justify-content: center;
+}
+#newpdlink > div:nth-child(4) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 10vh;
+  width: 30%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 연결성, 스타일 종료 */
+
+
+/* 신제품 배터리, 스타일 */
+#newpdbattery{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-color: var(--bgblack);
+}
+#newpdbattery > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbattery > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  width: 30%;
+  height: 10vh;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdbattery > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbattery > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  width: 40%;
+  height: 5vh;
+  font-size: 1em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdbattery > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbattery > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 20vh;
+  align-items: center;
+  justify-content: space-between;
+}
+#newpdbattery > div:nth-child(3) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 18vh;
+  width: 100%;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+}
+#newpdbattery > div:nth-child(3) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 1vh;
+  width: 70%;
+  font-size: 0.8vw;
+  align-items: center;
+  justify-content: center;
+  color: var(--cod4);
+}
+#newpdbattery > div:nth-child(4){
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+  width: 30vw;
+  align-items: center;
+  justify-content: space-between;
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 30vh;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: var(--cod4);
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  height: 7vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: var(--cod4);
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  height: 1vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > hr{
+  display: flex;
+  width: 100%;
+}
+#newpdbattery > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3){
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: var(--cod4);
+}
+
+
+/* 배터리, 스타일 끝 */
+
+
+/* 응급상황 메뉴얼 */
+#newpdemergency{
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgblack);
+}
+#newpdemergency > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+}
+#newpdemergency > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 35vh;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+}
+#newpdemergency > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  width: 90%;
+}
+#newpdemergency > div:nth-child(1) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+}
+#newpdemergency > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: gainsboro;
+  width: 80%;
+}
+#newpdemergency > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+#newpdemergency > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+
+/* 응급상황에 도움, 스타일 종료 */
+
+
+#newpdvalue{
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgblack);
+}
+#newpdvalue > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  width: 40vw;
+  align-items: left;
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 5vh;
+  width: 10vw;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  background-color: var(--bgd4);
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 10vh;
+  width: 10vw;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 2vh;
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(2) > hr{
+  display: flex;
+  width: 40vw;
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(3){
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  height: 15vh;
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  height: 15vh;
+  font-size: 1vh;
+  width: 45%;
+}
+#newpdvalue > div:nth-child(1) > div:nth-child(3) > div:nth-child(2){
+  display: flex;
+  height: 15vh;
+  font-size: 2vh;
+  width: 45%;
+}
+
+#newpdvalue > div:nth-child(1) > div:nth-child(4){
+  display: flex;
+  width: 20%;
+  font-size: 1em;
+  background-color: var(--bgd4);
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+/* ios17 소개입니다 */
+
+
+#newpdios17{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--bgblack);
+}
+#newpdios17 > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 90%;
+  background-color: var(--bggray);
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 80%;
+  height: 15vh;
+  font-size: 1.2em;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 75vh;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  height: 40vh;
+  width: 90%;
+  font-size: 1em;
+  background-color: var(--bgd4);
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 30vh;
+  width: 90%;
+  font-size: 1em;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  height: 40vh;
+  width: 90%;
+  font-size: 1em;
+  background-color: var(--bgd4);
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  height: 30vh;
+  width: 90%;
+  font-size: 1em;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1){
+  display: flex;
+  height: 40vh;
+  width: 90%;
+  font-size: 1em;
+  background-color: var(--bgd4);
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2){
+  display: flex;
+  height: 30vh;
+  width: 90%;
+  font-size: 1em;
+}
+#newpdios17 > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+  height: 5vh;
+  width: 30%;
+  background-color: var(--bgd4);
+  font-size: 1em;
+}
+
+
+/* 신제품 ios17, 스타일 종료 */
+
+
+
+/* 신제품 절친목록 스타일 */
+#newpdbf{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--bggray);
+}
+#newpdbf > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 70%;
+  height: 10vh;
+  font-size: 1em;
+}
+#newpdbf > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 70%;
+  background-color: var(--bgblack);
+  color: var(--cod4);
+}
+#newpdbf > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  width: 30%;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: 1.2em;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: 1em;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  font-size: 1.2em;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(1) > div:nth-child(3){
+  display: flex;
+  font-size: 1.2em;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  height: 50vh;
+  width: 30%;
+}
+#newpdbf > div:nth-child(2) > div:nth-child(3){
+  display: flex;
+  height: 50vh;
+  width: 30%;
+}
+
+
+/* 절친목록, 스타일 종료 */
+
+
+/* 신제품 쇼핑 스타일 */
+#newpdshop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: var(--bgblack);
+}
+#newpdshop > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  width: 40%;
+}
+#newpdshop > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  width: 40%;
+  height: 10vh;
+  font-size: 1em;
+  color: var(--cod4);
+}
+#newpdshop > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  width: 40%;
+  height: 10vh;
+  justify-content: right;
+  font-size: 1em;
+  color: var(--cod4);
+}
+#newpdshop > div:nth-child(2){
+  display: flex;
+  height: 30vh;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bggray);
+}
+
+
+/* 신제품 쇼핑, 스타일 종료 */
+
+
+#newpdmodel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: var(--bggray);
+}
+#newpdmodel > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 50%;
+}
+#newpdmodel > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  font-size: 1.2em;
+}
+#newpdmodel > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  font-size: 1em;
+}
+#newpdmodel > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 81vh;
+  width: 80%;
+  background-color: var(--bgblack);
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  height: 10vh;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 20vh;
+  color: var(--cod4);
+  font-size: 1em;
+  width: 30%;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(3){
+  display: flex;
+  width: 100%;
+  height: 1vh;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(3) > hr{
+  display: flex;
+  width: 30%;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(4){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+  width: 30%;
+  color: var(--cod4);
+  font-size: 1em;
+  text-align: center;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(4) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+#newpdmodel > div:nth-child(2) > div:nth-child(4) > div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+#newpdmodel > div:nth-child(3){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 20%;
+  font-size: 1em;
+  background-color: var(--bgd4);
+}
+
+
+/* 신제품 다른모델, 스타일 종료 */
+
+
+#newpdend{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--bgblack);
+  color: var(--cod4);
+}
+#newpdend > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 70%;
+}
+#newpdend > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 50%;
+}
+#newpdend > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+  display: flex;
+  justify-content: left;
+  height: 5vh;
+  font-size: 1em;
+}
+#newpdend > div:nth-child(1) > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 35vh;
+  width: 100%;
+  color: var(--cod4);
+  font-size: 1em;
+}
+#newpdend > div:nth-child(1) > div:nth-child(2){
+  display: flex;
+  height: 40vh;
+  width: 30%;
+}
+
+#bottom{
+  display: flex;
+  height: 100vh;
+  background-color: var(--bgblack);
+}
+
+/* 스타일 종료 */
+</style>
+<body>
+  <!-- !홈페이지의 내용들을 담을 부모요소입니다. -->
+  <div id="homepage">
+    <!-- !사용자가 자주 사용하는 언어와 홈페이지 언어가 다를 경우에만 나오게 설계한 팝업창입니다. -->
+    <div id="popuplang">
+      <!-- 언어 팝업창의 왼쪽 부분입니다. 컨텐츠를 추가할수도 있습니다. -->
+      <div>
+      </div>
+      <!-- !언어 팝업창 안에 있는 컨텐츠 내용입니다. -->
+      <div class="popupcontent">
+        <!-- 언어 팝업창의 안내문이 써져있는 div입니다. -->
+        <div>
+          <p>choose another country or region to see content specific to your location and shop online.</p>
+        </div>
+        <!-- 언어 선택을 할수 있는 선택박스가 있는 div입니다. -->
+        <div>
+          <select>
+            <option>United states</option>
+            <option>Korea</option>
+          </select>
+        </div>
+        <!-- 언어 선택후 확인버튼입니다. 누르면 언어가 바뀌어서 실행됩니다. -->
+        <div>
+          <p>continue</p>
+        </div>
+        <!-- 닫기버튼입니다. 언어 변경을 하고싶지 않은 사용자들이 팝업창을 닫기위한 용도입니다. -->
+        <div>
+          <div></div>
+        </div>
+      </div>
+      <!-- 언어 팝업창의 오른쪽 부분입니다. 컨텐츠를 추가할수도 있습니다. -->
+      <div>
+      </div>
+    </div>
+    <!-- !홈페이지 상단에 항상 존재하는 메뉴바입니다. -->
+    <div id="menubar">
+      <!-- 메뉴바의 왼쪽 1fr 부분입니다 -->
+      <div>
+      </div>
+      <!-- ! 메뉴가 있는 부분입니다. 각 메뉴에 맞는 효과를 넣습니다. -->
+      <div class="menucontent">
+        <div>
+          <p>사과</p>
+        </div>
+        <div>
+          <p>스토어</p>
+        </div>
+        <div>
+          <p>Mac</p>
+        </div>
+        <div>
+          <p>iPad</p>
+        </div>
+        <div>
+          <p>iPhone</p>
+        </div>
+        <div>
+          <p>Watch</p>
+        </div>
+        <div>
+          <p>Airpods</p>
+        </div>
+        <div>
+          <p>TV 및 홈</p>
+        </div>
+        <div>
+          <p>엔터테인먼트</p>
+        </div>
+        <div>
+          <p>악세서리</p>
+        </div>
+        <div>
+          <p>고객지원</p>
+        </div>
+        <div>
+          <p>돋보기</p>
+        </div>
+        <div>
+          <p>가방</p>
+        </div>
+      </div>
+      <!-- 메뉴바의 오른쪽 1fr 부분입니다 -->
+      <div>
+      </div>
+    </div>
+    <!-- !홈페이지 메뉴바 아래 광고팝업입니다 -->
+    <div id="popupad">
+      <div>
+      </div>
+      <div>
+        <p>iphone 11이상의 모델을 보상 판매하면 iphone 15 Pro 구입 시 사용할 수 있는 220,000-990,000 상당의 크레딧이. *구입하기></p>
+      </div>
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 대표이미지입니다 -->
+    <div id="newproduct">
+      <!-- 신제품 대표 이미지의 왼쪽 여백 -->
+      <div>
+      </div>
+      <div>
+        <div>
+          <p>티타늄</p>
+        </div>
+        <div>
+          <p>링크버튼</p>
+          <p>1,550,000부터</p>
+        </div>
+      </div>
+      <!-- 신제품 대표 이미지의 오른쪽 여백 -->
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 슬라이드 비디오 입니다 -->
+    <div id="newpdvideo">
+      <!-- 슬라이드 비디오 위쪽 여백입니다 -->
+      <div>
+      </div>
+      <!-- 제목과 동영상, 이벤트 링크 -->
+      <div>
+        <div>
+        </div>
+        <div>
+          <!-- 동영상 부분의 제목입니다 -->
+          <div>
+            <p>일단 핵심부터</p>
+          </div>
+          <!-- 동영상 링크와 이벤트 링크부분 입니다 -->
+          <div>
+            <p>동영상 링크 이벤트 링크</p>
+          </div>
+        </div>
+        <div>
+        </div>
+      </div>
+      <!-- 슬라이드 효과를 넣은 비디오 목록입니다. -->
+      <div>
+        <div>
+          <p>슬라이드 비디오</p>
+        </div>
+      </div>
+      <!-- 슬라이드 비디오 아래쪽 여백입니다 -->
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 색상 비교 이미지 슬라이드 입니다 -->
+    <div id="newpdcolor">
+      <!-- 색상비교 왼쪽 공백 -->
+      <div>
+      </div>
+      <div>
+        <div>
+        </div>
+        <div>
+          <p>보다 자세히 들여다보기</p>
+        </div>
+        <div>
+          <img src="" alt="">색상슬라이드
+        </div>
+        <div>
+        </div>
+      </div>
+      <!-- 색상 비교 오른쪽 공백 -->
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 케이스 소개입니다 -->
+    <div id="newpdcase">
+      <!-- 신제품 케이스 소개 시작 제목 -->
+      <div>
+        <!-- 시작제목 왼쪽 여백 -->
+        <div>
+        </div>
+        <div>
+          <p>본격적으로 탐구해 보기</p>
+        </div>
+        <!-- 시작제목 오른쪽 여백 -->
+        <div>
+        </div>
+      </div>
+      <!-- 신제품 케이스 소개문 -->
+      <div>
+        <div>
+        </div>
+        <div>
+          <div>
+            <p>iphone<br>티타늄을 두르다</p>
+          </div>
+          <div>
+            <div>
+              <div>
+                <p>이미지3</p>
+              </div>
+              <div>
+                <div>
+                  <p>이미지1</p>
+                </div>
+                <div>
+                  <p>이미지2</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>iphone 사상 최초로 항공우주 등급의 티타늄 디자인을 채택한 iphone 15 Pro. 화성 탐사선에 쓰이는 소재와 동일한 합금을 사용했습니다.</p>
+              </div>
+              <div>
+                <p>금속 중 비강도가 가장 탁월한 것으로 손꼽히는 티타늄을 사용한 덕분에 iphone 15 Pro는 역대 모델 중 가장 가볍습니다. 기기를 집어드는 순간, 가벼워진 무게감이 확연히 느껴지죠.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>디자인 및 디스플레이에 대해 더 알아보기</p>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 A17칩 소개입니다 -->
+    <div id="newpdchip">
+      <div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>a17 pro 칩 속속들이 살펴보기</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>A17<br>pro</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>A17 Pro 칩.<br>게임 평정, 괴물 프로세서.<br></p>
+            <p>마침내 apple gpu 사상 가장 큰 변화가 찾아왔습니다.</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <p>사진</p>
+            </div>
+            <div>
+              <p>붕괴:스타레이</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae enim ex facilis animi dolore, corrupti numquam omnis illum consequuntur dicta excepturi perspiciatis, placeat a deleniti nesciunt eaque laboriosam, repellat aperiam.</p>
+            </div>
+            <div>
+              <p>새로운</p>
+              <p>PRO급 GPU</p>
+              <p>6코어 탑재</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 카메라 소개입니다 -->
+    <div id="newpdcam">
+      <div>
+        <p>카메라 성능 줌인</p>
+      </div>
+      <div>
+        <div>
+          <p>상상 이상의 디테일까지<br>포착해주는 카메라.</p>
+        </div>
+        <div>
+          <p>비약적으로 유연해진 프레임 옵션부터 한 차원 높은 수준의 인물 사진까지, iphone 사상 가장 강력한 카메라 시스템이 만들어내는 놀라운 이미지를 소개합니다.</p>
+        </div>
+      </div>
+      <div>
+        <img src="" alt="">
+        <p>이구아나사진</p>
+      </div>
+      <div>
+        <p>iphone글 내용<br>글내용2<br>글내용3<br>글내용4</p>
+      </div>
+      <div>
+        <p>슬라이드사진</p>
+      </div>
+    </div>
+    <!-- !신제품 카메라 소개 하단부분 마무리 -->
+    <div id="camend">
+      <div>
+      </div>
+      <div>
+        <div>
+          <p>아이폰사진</p>
+        </div>
+        <div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptatibus reprehenderit molestiae harum mollitia cum magnam. Fugiat unde ducimus iusto tempore fugit? Quo minima commodi natus dolorem veritatis eum ad.</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <hr>
+        </div>
+        <div>
+          <p>마법같은공간 동영상을 촬영하고 그순간을<br>경험하세요</p>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 망원 파고들기 소개입니다 -->
+    <div id="newpdzoom">
+      <div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>5배 망원 파고들기</p>
+          </div>
+        </div>
+        <div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>초점거리.<br>완벽한 프로급 줌.<br></p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <p>사진</p>
+            </div>
+            <div>
+              <p>재생</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae enim ex facilis animi dolore, corrupti numquam omnis illum consequuntur dicta excepturi perspiciatis, placeat a deleniti nesciunt eaque laboriosam, repellat aperiam.</p>
+            </div>
+            <div>
+              <p>5배 광학 줌</p>
+              <p>120 렌즈</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 즐겨찾기 소개입니다 -->
+    <div id="newpdbmark">
+      <div>
+        <div>
+          <p>즐겨쓰는기능<br>동작<br>바로</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>윗글</p>
+          </div>
+          <div>
+            <hr>
+            <p>아랫글</p>
+          </div>
+        </div>
+        <div>
+          <p>그림</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quos! Sit voluptate at voluptatem illo ipsa, minus repellendus et vitae suscipit iure ducimus excepturi, quidem accusamus laudantium earum consequatur expedita?</p>
+          </div>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquid quos veniam excepturi. Sit hic esse, eum alias repudiandae odit eveniet expedita, doloremque ad vitae eos soluta sapiente placeat quis?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 연결성 소개입니다 -->
+    <div id="newpdlink">
+      <div>
+        <div>
+          <p>연결성 살펴보기</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>기가막히게빠른<br>기가급전송</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>그림</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt architecto explicabo asperiores aliquam exercitationem sit natus doloremque officiis est saepe fuga eum tempora odio quam, accusantium illum animi, maiores autem?</p>
+          </div>
+          <div>
+            <p>20배 더빠른 파일전송</p>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <!-- !신제품 배터리 소개입니다 -->
+    <div id="newpdbattery">
+      <div>
+        <div>
+          <p>진정프로<br>배터리성능</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>iphone은 첨단 신기능을<br>온종일 가는 배터리를</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>그림</p>
+          </div>
+          <div>
+            <p>작은글씨그림설명</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>최대<br>29<br>시간<br>23</p>
+          </div>
+          <div>
+            <div>
+              <p>별도의<br>효율적인</p>
+            </div>
+            <div>
+              <hr>
+            </div>
+            <div>
+              <p>Lorem ipsum, dolor sit<br> amet consectetur adipisicing<br> elit. Iste, illum <br>porro conse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 긴급상황 충돌감지 기능 소개입니다 -->
+    <div id="newpdemergency">
+      <div>
+        <div>
+          <div>
+            <p>응급상황에<br>든든한 도움이 되는</p>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>iphone은 생명을<br>충돌감지 기능을 가지고</p>
+          </div>
+          <div>
+            <p>자세한 방법 알아보기</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 가치 소개입니다 -->
+    <div id="newpdvalue">
+      <div>
+        <div>
+          <div>
+            <p>그림</p>
+          </div>
+          <div>
+            <p>더나은<br>세상을 위한 설계</p>
+          </div>
+        </div>
+        <div>
+          <hr>
+        </div>
+        <div>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quibusdam quia omnis officiis ab dignissimos sapiente, quod at sed incidunt modi magni repellendus temporibus ratione quisquam reiciendis ut voluptas numquam.</p>
+          </div>
+          <div>
+            <p>iphone<br>알류미늄 재활용</p>
+          </div>
+        </div>
+        <div>
+          <p>iphone이 지지하는가치</p>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 IOS17 소개입니다 -->
+    <div id="newpdios17">
+      <div>
+        <div>
+          <p>ios17<br>취향을듬뿍<br>스티커를 착착</p>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <p>그림</p>
+              </div>
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam labore assumenda quas incidunt vitae! Illo omnis explicabo officia dolore laudantium numquam amet excepturi accusamus? Non quaerat obcaecati expedita cumque natus?</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>그림2</p>
+              </div>
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores error quisquam nostrum magni placeat, iure, quasi, consectetur unde ab cum recusandae? Soluta quam laboriosam magni veritatis eaque? Recusandae, consequatur dignissimos?</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>그림3</p>
+              </div>
+              <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, libero placeat ipsam, inventore ratione nesciunt quidem perferendis alias aut voluptates totam, quas numquam natus repellat reprehenderit id cupiditate maxime tempore?</div>
+            </div>
+          </div>
+          <div>
+            <p>ios17에대해 더 알아보기</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 아이폰과 OOO -->
+    <div id="newpdbf">
+      <div>
+        <div>
+          <p>절친목록</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <p>아이폰과애플워치</p>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum quod reiciendis, amet rerum explicabo ipsam eveniet eum. Voluptatum voluptates quidem, iure velit sequi voluptate ratione est aliquam quasi asperiores.</p>
+            </div>
+          </div>
+          <div>
+            <p>아이폰과맥</p>
+          </div>
+          <div>
+            <p>아이폰과에어팟</p>
+          </div>
+        </div>
+        <!-- 공백 div -->
+        <div>
+        </div>
+        <!-- 공백 div -->
+        <div>
+        </div>
+      </div>
+    </div>
+    <!-- !신제품 쇼핑하는법 소개입니다 -->
+    <div id="newpdshop">
+      <div>
+        <div>
+          <p>부담없이쇼핑</p>
+        </div>
+        <div>
+          <p>아이폰쇼핑하기</p>
+        </div>
+      </div>
+      <div>
+        <p>슬라이드</p>
+      </div>
+    </div>
+    <!-- !신제품 다른모델 소개입니다 -->
+    <div id="newpdmodel">
+      <div>
+        <div>
+          <p>다른 아이폰모델</p>
+        </div>
+        <div>
+          <p>아이폰살펴보기</p>
+        </div>
+      </div>
+      <div>
+        <div>
+        </div>
+        <div>
+          <div>
+            <p>그림<br><br>아이폰프로<br><br>150부터<br><br>현재보고있는모델</p>
+          </div>
+          <div>
+            <p>그림<br><br>아이폰프로<br><br>150부터<br><br>더알아보기</p>
+          </div>
+        </div>
+        <div>
+          <hr>
+        </div>
+        <div>
+          <div>
+            <div>
+            <p>A17 pro칩<br>6코어 GPU 탑재</p>
+            </div>
+            <div>
+            <p>프로급 카메라 시스템</p>
+            <p>apple사상<br>3배<br>울트라</p>
+           </div>
+           <div>
+            <p>최대 25시간</p>
+            </div>
+          </div>
+          <div>
+            <div>
+            <p>A17 pro칩<br>6코어 GPU 탑재</p>
+            </div>
+            <div>
+            <p>프로급 카메라 시스템</p>
+            <p>apple사상<br>3배<br>울트라</p>
+            </div>
+            <div>
+            <p>최대 25시간</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>모든아이폰모델비교하기</p>
+      </div>
+      <div>
+      </div>
+    </div>
+    <!-- !최하단 메뉴입니다. -->
+    <div id="newpdend">
+      <div>
+        <div>
+          <div>
+            <p>아이폰</p>
+          </div>
+          <div>
+            <div>
+              <p>iPhone 살펴보기</p>
+              <p>iPhone 모두</p>
+              <p>iPhone 15</p>
+              <p>iPhone 15</p>
+              <p>iPhone 14</p>
+              <p>iPhone 13</p>
+              <p>iPhone SE</p>
+              <p>iPhone 비교</p>
+              <p>iPhone으로 갈아</p>
+            </div>
+            <div>
+              <p>iPhone 살펴보기</p>
+              <p>iPhone 모두</p>
+              <p>iPhone 15</p>
+              <p>iPhone 15</p>
+              <p>iPhone 14</p>
+            </div>
+            <div>
+              <p>iPhone 살펴보기</p>
+              <p>iPhone 모두</p>
+              <p>iPhone 15</p>
+              <p>iPhone 15</p>
+              <p>iPhone 14</p>
+              <p>iPhone 모두</p>
+              <p>iPhone 15</p>
+              <p>iPhone 15</p>
+              <p>iPhone 14</p>
+            </div>
+          </div>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+    <!-- !하단 추가 여유분 div입니다. -->
+    <div id="bottom">
+    </div>
+  </div>
+</body>
+</html>

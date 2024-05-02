@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="fline">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+    </div>
+    <div id="sline">
+      <div id="four"></div>
+      <div id="five"></div>
+      <div id="six"></div>
+    </div>
+    <div id="tline">
+      <div id="seven"></div>
+      <div id="eight"></div>
+      <div id="nine"></div>
+    </div>
+  </div>
+  <script>
+    var count = 0;
+
+    let root = document.getElementById('root');
+    let fline = document.getElementById('fline');
+    let sline = document.getElementById('sline');
+    let tline = document.getElementById('tline');
+    let one = document.getElementById('one');
+    let two = document.getElementById('two');
+    let three = document.getElementById('three');
+    let four = document.getElementById('four');
+    let five = document.getElementById('five');
+    let six = document.getElementById('six');
+    let seven = document.getElementById('seven');
+    let eight = document.getElementById('eight');
+    let nine = document.getElementById('nine');
+
+    // 전체판
+    root.style.display = "flex";
+    root.style.flexDirection = "column";
+    root.style.justifyContent = "space-around";
+    root.style.alignItems = "center";
+    root.style.backgroundColor = "gray";
+    root.style.width = "95vw";
+    root.style.height = "95vh";
+
+    // 첫번째줄
+    fline.style.display = "flex";
+    fline.style.flexDirection = "row";
+    fline.style.justifyContent = "space-around";
+    fline.style.width = "80vw";
+    fline.style.height = "25vh";
+
+    // 두번째줄
+    sline.style.display = "flex";
+    sline.style.flexDirection = "row";
+    sline.style.justifyContent = "space-around";
+    sline.style.width = "80vw";
+    sline.style.height = "25vh";
+
+    // 세번째줄
+    tline.style.display = "flex";
+    tline.style.flexDirection = "row";
+    tline.style.justifyContent = "space-around";
+    tline.style.width = "80vw";
+    tline.style.height = "25vh";
+
+    one.style.display = "flex";
+    one.style.width = "20vw";
+    one.style.border = "1px";
+    one.style.borderStyle = "solid";
+    one.style.alignItems = "center";
+    one.style.justifyContent = "center";
+
+    two.style.display = "flex";
+    two.style.width = "20vw";
+    two.style.border = "1px";
+    two.style.borderStyle = "solid";
+    two.style.alignItems = "center";
+    two.style.justifyContent = "center";
+
+    three.style.display = "flex";
+    three.style.width = "20vw";
+    three.style.border = "1px";
+    three.style.borderStyle = "solid";
+    three.style.alignItems = "center";
+    three.style.justifyContent = "center";
+
+    four.style.display = "flex";
+    four.style.width = "20vw";
+    four.style.border = "1px";
+    four.style.borderStyle = "solid";
+    four.style.alignItems = "center";
+    four.style.justifyContent = "center";
+
+    five.style.display = "flex";
+    five.style.width = "20vw";
+    five.style.border = "1px";
+    five.style.borderStyle = "solid";
+    five.style.alignItems = "center";
+    five.style.justifyContent = "center";
+
+    six.style.display = "flex";
+    six.style.width = "20vw";
+    six.style.border = "1px";
+    six.style.borderStyle = "solid";
+    six.style.alignItems = "center";
+    six.style.justifyContent = "center";
+
+    seven.style.display = "flex";
+    seven.style.width = "20vw";
+    seven.style.border = "1px";
+    seven.style.borderStyle = "solid";
+    seven.style.alignItems = "center";
+    seven.style.justifyContent = "center";
+
+    eight.style.display = "flex";
+    eight.style.width = "20vw";
+    eight.style.border = "1px";
+    eight.style.borderStyle = "solid";
+    eight.style.alignItems = "center";
+    eight.style.justifyContent = "center";
+
+    nine.style.display = "flex";
+    nine.style.width = "20vw";
+    nine.style.border = "1px";
+    nine.style.borderStyle = "solid";
+    nine.style.alignItems = "center";
+    nine.style.justifyContent = "center";
+    
+    //  몇회 클릭했나 세기 count+6회째는 count회꺼 삭제
+    function clickcount() {
+      count++;
+      console.log(count+"회작동!")
+    }
+
+    one.addEventListener('click', clickcount);
+    two.addEventListener('click', clickcount);
+    three.addEventListener('click', clickcount);
+    four.addEventListener('click', clickcount);
+    five.addEventListener('click', clickcount);
+    six.addEventListener('click', clickcount);
+    seven.addEventListener('click', clickcount);
+    eight.addEventListener('click', clickcount);
+    nine.addEventListener('click', clickcount);
+
+
+    // 누르는데에 따라 작동해보자
+    function tictakto1() {
+    if (one.innerHTML === ""){
+    if (count % 2 === 0) {
+      one.innerHTML = "O";
+      one.style.fontSize = "3em";
+      one.style.color = "yellow";
+    } else {
+      one.innerHTML = "X";
+      one.style.fontSize = "3em";
+      one.style.color = "white";
+    }
+    }else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto2() {
+    if (two.innerHTML === ""){
+    if (count % 2 === 0) {
+      two.innerHTML = "O";
+      two.style.fontSize = "3em";
+      two.style.color = "yellow";
+    } else {
+      two.innerHTML = "X";
+      two.style.fontSize = "3em";
+      two.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+    
+    function tictakto3() {
+    if (three.innerHTML === ""){
+    if (count % 2 === 0) {
+      three.innerHTML = "O";
+      three.style.fontSize = "3em";
+      three.style.color = "yellow";
+    } else {
+      three.innerHTML = "X";
+      three.style.fontSize = "3em";
+      three.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto4() {
+    if (four.innerHTML === "") {
+    if (count % 2 === 0) {
+      four.innerHTML = "O";
+      four.style.fontSize = "3em";
+      four.style.color = "yellow";
+    } else {
+      four.innerHTML = "X";
+      four.style.fontSize = "3em";
+      four.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto5() {
+    if (five.innerHTML === "") {
+    if (count % 2 === 0) {
+      five.innerHTML = "O";
+      five.style.fontSize = "3em";
+      five.style.color = "yellow";
+    } else {
+      five.innerHTML = "X";
+      five.style.fontSize = "3em";
+      five.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto6() {
+    if (six.innerHTML === "") {
+    if (count % 2 === 0) {
+      six.innerHTML = "O";
+      six.style.fontSize = "3em";
+      six.style.color = "yellow";
+    } else {
+      six.innerHTML = "X";
+      six.style.fontSize = "3em";
+      six.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto7() {
+    if (seven.innerHTML === "") {
+    if (count % 2 === 0) {
+      seven.innerHTML = "O";
+      seven.style.fontSize = "3em";
+      seven.style.color = "yellow";
+    } else {
+      seven.innerHTML = "X";
+      seven.style.fontSize = "3em";
+      seven.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto8() {
+    if (eight.innerHTML === "") {
+    if (count % 2 === 0) {
+      eight.innerHTML = "O";
+      eight.style.fontSize = "3em";
+      eight.style.color = "yellow";
+    } else {
+      eight.innerHTML = "X";
+      eight.style.fontSize = "3em";
+      eight.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    function tictakto9() {
+    if (nine.innerHTML === "") {
+    if (count % 2 === 0) {
+      nine.innerHTML = "O";
+      nine.style.fontSize = "3em";
+      nine.style.color = "yellow";
+    } else {
+      nine.innerHTML = "X";
+      nine.style.fontSize = "3em";
+      nine.style.color = "white";
+    }
+    } else {
+      alert("이미 놓은자리");
+    }
+    };
+
+    one.addEventListener('click', tictakto1);
+    two.addEventListener('click', tictakto2);
+    three.addEventListener('click', tictakto3);
+    four.addEventListener('click', tictakto4);
+    five.addEventListener('click', tictakto5);
+    six.addEventListener('click', tictakto6);
+    seven.addEventListener('click', tictakto7);
+    eight.addEventListener('click', tictakto8);
+    nine.addEventListener('click', tictakto9);
+
+
+  </script>
+</body>
+</html>

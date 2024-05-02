@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">테스트</div>
+  <script>
+    const root = document.getElementById('root');
+
+    const h1 = document.createElement('h1');
+    // h1이 만들어지기는 했지만 쓰여지지는 않은 것, 상자에 담아놓기는 했지만 쓰지는 않은것
+    document.body.appendChild(h1);
+    // append 덧붙이다, 마지막 자식으로 추가할 수도 있겠구나
+    root.appendChild(h1);
+    // root의 자식으로 h1을 추가해줘
+    h1.innerHTML = "송이현";
+
+    
+
+  </script>
+</body>
+</html>

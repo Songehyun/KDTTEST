@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1 onclick="newman()">송이현</h1>
+    <h1 onclick="lier()">거짓말</h1>
+  </div>
+  <script>
+    let root = window.document.getElementById('root');
+    
+
+    console.dir(root);
+
+    function newman() {
+      console.dir(root);
+      console.log(root.children[0].innerHTML);
+
+      root.children[0].innerHTML = "새로운";
+
+      console.log(root.children[0].innerHTML);
+
+      root.children[0].style.backgroundColor = "#101010";
+      root.children[0].style.color = "yellow";
+    }
+    function lier() {
+      console.dir(root);
+      console.log(root.children[1].innerHTML);
+
+      root.children[1].innerHTML = "거짓말";
+
+      console.log(root.children[1].innerHTML);
+
+      root.children[1].style.backgroundColor = "yellow";
+      root.children[1].style.color = "#101010";
+    }
+
+
+
+
+
+  </script>
+</body>
+</html>

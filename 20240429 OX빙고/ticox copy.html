@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="fline">
+    </div>
+    <div id="sline">
+    </div>
+    <div id="tline">
+    </div>
+  </div>
+  <script>
+    var count = 0;
+    let root = document.getElementById('root');
+    let fline = document.getElementById('fline');
+    let sline = document.getElementById('sline');
+    let tline = document.getElementById('tline');
+
+    let flinenumber = [
+      "one",
+      "two",
+      "three"
+    ];
+
+    let slinenumber = [
+      "four",
+      "five",
+      "six"
+    ];
+
+    let tlinenumber = [
+      "seven",
+      "eight",
+      "nine"
+    ];
+
+    for (i = 0; i < flinenumber.length; i++) {
+      let a = document.createElement('div');
+      a.id = flinenumber[i];
+      fline.appendChild(a);
+    }
+
+    for (i = 0; i < slinenumber.length; i++) {
+      let a = document.createElement('div');
+      a.id = slinenumber[i];
+      sline.appendChild(a);
+    }
+
+    for (i = 0; i < tlinenumber.length; i++) {
+      let a = document.createElement('div');
+      a.id = tlinenumber[i];
+      tline.appendChild(a);
+    }
+    
+    let one = document.getElementById('one');
+    let two = document.getElementById('two');
+    let three = document.getElementById('three');
+    let four = document.getElementById('four');
+    let five = document.getElementById('five');
+    let six = document.getElementById('six');
+    let seven = document.getElementById('seven');
+    let eight = document.getElementById('eight');
+    let nine = document.getElementById('nine');
+    let select = null
+
+    // 전체판
+    root.style.display = "flex";
+    root.style.flexDirection = "column";
+    root.style.justifyContent = "space-around";
+    root.style.alignItems = "center";
+    root.style.backgroundColor = "gray";
+    root.style.width = "95vw";
+    root.style.height = "95vh";
+
+    // 첫번째줄
+
+    let line = [
+      fline,
+      sline,
+      tline
+    ];
+
+    for (i = 0; i < line.length; i++){
+      line[i].style.display = "flex";
+      line[i].style.flexDirection = "row";
+      line[i].style.justifyContent = "space-around";
+      line[i].style.width = "80vw";
+      line[i].style.height = "25vh";
+    }
+
+    let number = [
+      one,
+      two,
+      three,
+      four,
+      five,
+      six,
+      seven,
+      eight,
+      nine
+    ];
+
+    for (i = 0; i < number.length; i++){
+      number[i].style.display = "flex";
+      number[i].style.width = "20vw";
+      number[i].style.border = "1px";
+      number[i].style.borderStyle = "solid";
+      number[i].style.alignItems = "center";
+      number[i].style.justifyContent = "center";
+    }
+    
+    
+    //  몇회 클릭했나 세기 count+6회째는 count회꺼 삭제
+    function clickcount() {
+      count++;
+      console.log(count+"회작동!")
+    }
+
+    for(i = 0 ; i < number.length; i++){
+      number[i].addEventListener('click', clickcount)
+    }
+
+    let game = [];
+
+
+
+    // 누르는데에 따라 작동해보자
+    function tictaktox() {
+    if (this.innerHTML === ""){
+    if (count % 2 === 0) {
+      this.innerHTML = "O";
+      this.style.fontSize = "3em";
+      this.style.color = "yellow";
+      game[count] = 뭔가
+      if(count > 6) {
+        game[count-6] = 비어
+      }
+    } else {
+      this.innerHTML = "X";
+      this.style.fontSize = "3em";
+      this.style.color = "white";
+    }
+    }else {
+      alert("이미 놓은자리");
+      count--;
+    }
+    };
+
+    for(i = 0; i < number.length; i++){
+      number[i].addEventListener('click', tictaktox)
+    }
+
+
+
+    // if (count >= 7 && count % 2 === 0) {
+
+    // } else {
+
+    // }
+
+  </script>
+</body>
+</html>

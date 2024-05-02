@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flextest</title>
+</head>
+<style>
+    div:nth-child(1){
+        display: flex;
+        /* flex-direction: row; 기본값 */
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <div>
+        <p>가로로</p>
+        <p>서로가</p>
+        <p>같은간격으로</p>
+        <p>떨어져있는</p>
+        <p>다만 양 끝은 빈칸없이</p>
+        <p>세로는 적용안돼</p>
+        <p>space-between</p>
+    </div>
+    <div>
+        <section>
+            <p></p>
+        </section>
+    </div>
+</body>
+</html>

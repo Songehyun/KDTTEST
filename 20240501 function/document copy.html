@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    let root = document.getElementById('root');
+    root.style.display = "flex";
+    root.style.flexDirection = "column";
+    root.style.backgroundColor = "#d9d9d9"
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+
+    let div1 = document.createElement('div');
+    root.appendChild(div1);
+    div1.style.backgroundColor = "#b0b0b0";
+    div1.style.width = "100vw";
+    div1.style.height = "45vh";
+    div1.style.position = "absolute";
+    div1.style.zIndex = 1;
+
+
+    let button = document.createElement('button');
+    root.appendChild(button);
+    button.style.zIndex = 2;
+    button.style.width = "80px";
+    button.style.height = "80px";
+    button.style.backgroundColor = "#464646"
+    button.style.marginTop = "47px";
+    button.style.marginLeft = "46px";
+    // button.hidden = true;
+
+    let div2 = document.createElement('div');
+    root.appendChild(div2);
+
+    // if (targetElement.style.display !== "none") {
+    //   const elements = {
+    //   triggerElement : button, 
+    //   targetElement : div1,
+    //   someText : "none",
+    // }
+    // } else {
+
+    //   const elements = {
+    //   triggerElement : button, 
+    //   targetElement : div1,
+    //   someText : "block",
+    // }
+    // }
+
+    clickElement(elements.triggerElement, elements.targetElement, elements.someText);
+    
+    function clickElement(clickTriggerElement, targetElement, someText) {
+    function someEvent(targetElement, someText) {
+        targetElement.style.display = someText;
+      }
+      clickTriggerElement.addEventListener('click',() => someEvent(targetElement, someText));
+    };
+
+  </script>
+</body>
+</html>

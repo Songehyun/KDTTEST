@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>입력한 숫자의 합계</h1>
+  </div>
+  <script>
+    let root = document.getElementById('root');
+    let h_one = root.children[0];
+
+    function change (one, two, three) {             
+        if(typeof one === "number" && typeof two === "number" && typeof three === "number" && one === 2){        
+          h_one.innerHTML = "one은 2고 숫자의 합은" + (one + two + three) + "이야";
+          h_one.style.color = "blue";
+        } else {
+          h_one.innerHTML = "one이 2가 아니거나 요소중 하나가 숫자가 아니야";
+          h_one.style.color = "red";
+        }
+    }
+
+    h_one.onclick = change.bind(0, 2, 4, 24);
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- root.children[0].onclick = () => { return 1;}
+let isOne = () => {return 1;}
+let num = isOne();
+console.log(num);
+root.children[0].onclick = () => {a(1,child)};
+root.children[0].onclick = a(2,3); // == root.children[0].onclick = 3; -->

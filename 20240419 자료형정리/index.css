@@ -1,0 +1,77 @@
+  *{
+    font-family: "Noto Sans KR", Helvetica, sans-serif;
+  }
+  :root{
+    --bgf6: #f6f4E8;
+    --bgba: #bacec1;
+  }
+
+  body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+  }
+  div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+    display: flex;
+    height: 15vh;
+    width: 99vw;
+    background-color: var(--bgf6);
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--bgba);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  div:nth-child(1) > div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+  }
+  div:nth-child(1) > div:nth-child(2) > .border{
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: var(--bgf6);
+    border-width: 0.5px;
+  }
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+    display: flex;
+    width: 1vw;
+    background-color: var(--bgba);
+  }
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    width: 14vw;
+    height: 83vh;
+    background-color: var(--bgba);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > p{
+    cursor: pointer;
+  }
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > p::first-letter{
+    color: red;
+  }
+
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 84vw;
+    height: 83vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgf6);
+    overflow-y: scroll;
+  }

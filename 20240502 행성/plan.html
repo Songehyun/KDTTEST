@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function addItem(array, item, index) {
+      let newArray = [];
+
+      function isIndexAfterInsertionPoint(currentIndex) {
+        return currentIndex > index;
+      }
+
+      for (let i = 0; i <= array.length; i++) {
+        if (i === index) {
+          newArray[i] = item;
+        } else if (isIndexAfterInsertionPoint(i) === true) {
+          newArray[i] = array[i - 1];
+        } else {
+          newArray[i] = array[i];
+        }
+      }
+      return newArray;
+    }
+
+
+    let planets = ["수성", "금성", "지구", "화성", "목성", "토성", "천왕성", "해왕성"];
+    // 배열하나 만들어주자
+    let updatedPlanets = addItem(planets, "명왕성", 5);
+    //함수 호출인데 얘를 변수에 담네? 그럼 이건 값인가?
+
+    for(let i = 0; i < updatedPlanets.length; i++) {
+      // updated는 length가 있으니까 실제값은 무엇인지 모르는데 배열이나 문자열일 가능성이 높다.
+      console.log(updatedPlanets[i]);
+    }
+  </script>
+</body>
+</html>

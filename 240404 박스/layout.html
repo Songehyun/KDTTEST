@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .flex{
+            display: inline-flex;
+            background-color: #d3d3d3;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 300px;
+        }
+        div{
+            display: inline-flex;
+        }
+        .box > div:nth-child(2){
+            color: #000;
+            position: absolute; left: 0; bottom: 0;
+            background: #d3d3d3;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.35s ease-in-out;
+        }
+        .box:hover div:nth-child(2){
+            opacity: 1;
+         }
+         .box div:nth-child(2) h2 {
+            font-size: 24px;
+            padding-bottom: 0.4em;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .box {
+            position: relative;
+            width: 100%; height: 100%;
+            border: 0px
+        }
+
+    </style>
+
+</head>
+<body style="background-color: #d3d3d3">
+    <h1>배치와 구도는 어떻게 해야 눈에 잘 들어올까? 어떻게 해야할까?</h1>
+    <h2>1. 크기에 차이를 두어서 말하고 싶은 것을 눈에 띄게 한다 (크기 조정)</h2>
+    <div class="flex">
+    <div class="box">
+        <div class="pic">
+            <img src="/img/re.jpg" alt="" height="150px" width="150px">
+        </div>
+        <div class="info">
+            <h2>꾸준히 진행하기</h2>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="/img/mind.jpg" alt="" height="150px" width="150px">
+        </div>
+        <div class="info">
+            <h2>다양한 지식 키우기</h2>
+        </div>
+    </div>
+    <div class="box">
+        <div class="pic">
+            <img src="/img/day.jpg" alt="" height="300px" width="300px">
+        </div>   
+        <div class="info">
+            <h2>계획적으로 생활하기</h2>
+        </div>
+    </div>
+    </div>
+    <h2>2. </h2>  
+</body> 
+</html>

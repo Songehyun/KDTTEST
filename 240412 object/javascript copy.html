@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- ? root은 body 태그 대신 편집할 부모요소 -->
+  <div id="root">
+    <h1>송이현</h1>
+  </div>
+  <script>
+    window.console.log(document.getElementsByTagName('h1'));
+    window.console.log(document.getElementsByTagName('h1')[0].innerText);
+
+    var h1 = document.getElementsByTagName('h1')[0];
+
+    h1.innerText = "h1에 쓴 글자가바뀐다";
+    h1.style.color = "pink";
+    h1.style.backgroundColor = "black";
+
+  </script>
+</body>
+</html>

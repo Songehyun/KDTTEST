@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div>김수현</div>
+    <div>유호영</div>
+    <div>조자연</div>
+  </div>
+  <script>
+    let root = window.document.getElementById('root');
+    console.log(root);
+    // console.dir(root);
+    // root.id = "container";
+    // console.dir(root);
+    console.log(root.children[0].textContent);
+
+
+    let arr = ["배성빈", "신지윤", "김인티저"];
+
+    
+    
+    let moon = "문혜림";
+    root.children[0].textContent = moon;
+    root.children[1].textContent = "김보미";
+    root.children[2].textContent = "임유진";
+    
+
+    for (let bae = 0; bae < arr.length; bae++) {
+      if (arr[bae] === "배성빈"){
+        arr[bae] = "이종수";
+      }
+      root.children[bae].textContent = arr[bae];
+    }
+
+    for (let i = 0; i < root.children.length; i++) {
+      window.console.log(root.children[i].textContent);
+    }
+
+  </script>
+</body>
+</html>

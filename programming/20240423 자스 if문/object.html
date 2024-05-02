@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>CSS는 디자이너에게 넘겨주기</h1>
+    <p>CSS는 프로그래밍이 아닌, 디자인에 가까운 작업이다.</p>
+    <p>개발자는 CSS의 코어를 이해했기 때문에, CSS 대신에 직접 스크립트로 스타일을 조작 할 수 있다.</p>
+    <p>태그는, 객체라는 사실을 잊지 말자.</p>
+  </div>
+  <script>
+    var root = window.document.getElementById('root');
+    window.console.log(root);
+    window.console.dir(root);
+    window.console.log(root.children);
+
+    for (var i = 0; i < root.children.length; i++) {
+      window.console.log(root.children[i]);
+    }
+    
+    root.style.display = 'flex';
+    root.style.flexDirection = 'column';
+    root.style.alignItems = 'center';
+    root.style.justifyContent = 'center';
+
+
+    let color_background = ['yellow', '#101010']
+    
+    for (var co = 0; co < color_background.length; co++) {
+      root.style.backgroundColor = color_background[co]
+      root.style.color = color_background[co-1]
+    }
+    
+    
+
+
+
+
+    // console.log(color[0]);
+
+    // console.dir(color);
+
+
+    // console.log(blue);
+    
+    
+    // let color = [blue, 'yellow']
+    
+    // for (let wow = 0; wow < style.length; wow++) {
+      //   style[wow] = color[wow];
+      // }
+      
+      
+      // console.log(style);
+      // console.dir(style);
+      
+    // document.write(style[0])
+    
+    // let i = 'blue';
+    
+    // root.style.backgroundColor = i;
+    
+    // for(let n = 0; n < style.length; n++) {
+      // if(style[n] === 'blue') {
+        //   style[n] = 'black'
+    // }
+    // }
+
+    // for (var i = 0; i < style.length; i++) {
+      //   if (style[i] === 'white') {
+        //     style[i] = root.style.color = 'yellow'
+        //   }
+    // }
+    // let style = [
+    //   [],
+    //   root.style.color = []
+    // ]
+    
+    </script>
+</body>
+
+</html>

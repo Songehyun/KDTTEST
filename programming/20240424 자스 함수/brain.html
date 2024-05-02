@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>제목</h1>
+    <p>내용</p>
+  </div>
+  <script>
+    let root = document.getElementById('root');
+
+
+    function a(first, second, third) {
+      console.log(first+second*third);
+    }
+    a(2, 2, 2);
+    a(3, 3, 3);
+    a(200, 500, 300);
+
+    function b(m1, m2, m3) {
+      return m1+m2*m3;
+    }
+    console.log(b(2, 2, 2));
+
+    function c(one, two, three) {
+      if (one !== 2) {
+        one = "메롱";
+        document.write(one)
+      } else {
+        document.write(one + two + three);
+      }
+    }
+    c(2, 4, 5)
+
+
+    //만약에 첫번쨰 값이 숫자 2가 아니라면 메롱을 찍어줘
+
+
+
+
+
+  </script>
+</body>
+</html>
