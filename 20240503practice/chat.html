@@ -9,21 +9,28 @@
 <body>
   <div id="root"></div>
   <div id="chatting">
+  <img src="/20240503practice/chatting.jpg" alt="" id="chatimg">
   <input id="todo-input" type="text" title="입력 칸" placeholder="">  <!-- title는 안보이는 타이틀이야 -->
   <select id="order-select" title="Order Select" style="display: none;"></select>
   <button id="add-button"> ↩ </button>
+  <div id="chatline"></div>
   </div>
   <script>
+
     let root = document.getElementById('root');
     let addButton = document.getElementById('add-button');
     let todoInput = document.getElementById('todo-input');
     let orderSelect = document.getElementById('order-select');
     let chatting = document.getElementById('chatting');
+    let chatimg = document.getElementById('chatimg');
     let todoItems = [];   // 할일 목록을 기록하는건데 빈 배열에 기록하기로 했나? 아직모르겠다.
 
+    chatting.style.display = "flex";
+    chatting.style.justifyContent = "center";
     chatting.style.width = "50vw";
-    let chatimg = 
-
+    chatimg.style.width = "50vw";
+    chatimg.style.position = "absolute";
+    chatimg.style.zIndex = -1;
 
 
     function updateSelectOptions() {              // 조건이 없으니 항상 실행되는 함수인듯하다
@@ -36,7 +43,7 @@
     }
 
     function updateView() {
-      root.innerHTML = '';                                     // 실행될때 root의 innerHTML 초기화
+      chatline.innerHTML = '';                                     // 실행될때 root의 innerHTML 초기화
       for (let i = 0; i < todoItems.length; i++) {              // todoitem의 길이만큼 반복실행 여기는 length가 따로 선언이 안돼있다.
         let itemElement = document.createElement('p');          // itemelement라는 p태그를 생성
         itemElement.textContent = `${todoItems[i]}`;            // 텍스트 컨텐츠를 투두 아이템의 i번째 내용으로 변경, $의 의미: 안에 문자열이 포함되어있다라는걸 보여주는것
@@ -45,7 +52,7 @@
         itemElement.style.backgroundColor = "gray";
         itemElement.style.color = "white";
         itemElement.style.borderRadius = "5px";
-        root.appendChild(itemElement);                          // 루트의 자식으로 p태그 넣어줘
+        chatline.appendChild(itemElement);                          // 루트의 자식으로 p태그 넣어줘
       }
       updateSelectOptions();                                    // updateSelectOptions 포문다 끝나고 함수작동
     }
