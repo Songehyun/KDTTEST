@@ -7,48 +7,53 @@
   <title>Document</title>
 </head>
 <body id="all">
-  <div id="root"></div>
   <div id="box">
-    <div id="imgbox">
-      <img src="chatting.jpg" alt="" id="chatimg">
-    </div>
-    <div>
-      <input id="todo-input" type="text" title="입력 칸" placeholder="">
-    </div>
-    <div id="chatting">
+    <img src="chatting.jpg" alt="" id="chatimg">
+    <div id="chatline">
       <select id="order-select" title="Order Select" style="display: none;"></select>
     </div>
-    <div>
+    <div id="chatbar">
+      <input id="todo-input" type="text" title="입력 칸" placeholder="">
       <button id="add-button"> ↩ </button>
     </div>
-  <div id="chatline"></div>
   </div>
   <script>
 
     let all = document.getElementById('all');
-    let root = document.getElementById('root');
     let box = document.getElementById('box');
     let addButton = document.getElementById('add-button');
     let todoInput = document.getElementById('todo-input');
     let orderSelect = document.getElementById('order-select');
     let chatting = document.getElementById('chatting');
     let chatimg = document.getElementById('chatimg');
-    let imgbox = document.getElementById('imgbox');
+    let chatbar = document.getElementById('chatbar');
+    let chatline = document.getElementById('chatline');
     let todoItems = [];   // 할일 목록을 기록하는건데 빈 배열에 기록하기로 했나? 아직모르겠다.
 
     all.style.display = "flex";
-    all.style.flexDirection = "column";
+    all.style.flexDirection = "row";
+    all.style.justifyContent = "center";
     all.style.margin = 0;
+
     box.style.display = "flex";
-    box.style.width = "50vw";
-    box.style.height = "50vh";
-    box.style.flexDirection = "row";
-    box.style.justifyContent = "center";
-    imgbox.style.display = "flex";
+    box.style.flexDirection = "column";
+    box.style.width = "35vw";
+    box.style.height = "100vh";
+    
     chatimg.style.position = "absolute";
     chatimg.style.zIndex = -1;
-    chatimg.style.height = "60vw"
+    chatimg.style.height = "100vh"
+    chatimg.style.width = "35vw"
 
+    chatline.style.display = "flex";
+    chatline.style.height = "97vh";
+    chatline.style.width = "10vw";                // 글자 크기에 따라 수정 필요
+
+    chatbar.style.display = "flex";
+    chatbar.style.flexDirection = "row";
+    chatbar.style.justifyContent = "center";
+
+    todoInput.style.width = "93%";                // 채팅창크기
 
     function updateSelectOptions() {              // 조건이 없으니 항상 실행되는 함수인듯하다
       let length = todoItems.length;              // 할일 목록의 길이를 측정
