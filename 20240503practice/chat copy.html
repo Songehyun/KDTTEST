@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    ::-webkit-scrollbar{
+      display: none;
+    }
+  </style>
 </head>
 <body id="all">
   <div id="box">
@@ -30,31 +35,6 @@
     let chatline = document.getElementById('chatline');
     let todoItems = [];   // 할일 목록을 기록하는건데 빈 배열에 기록하기로 했나? 아직모르겠다.
 
-    all.style.display = "flex";
-    all.style.flexDirection = "row";
-    all.style.justifyContent = "center";
-    all.style.margin = 0;
-
-    box.style.display = "flex";
-    box.style.flexDirection = "column";
-    box.style.width = "35vw";
-    box.style.height = "100vh";
-    
-    chatimg.style.position = "absolute";
-    chatimg.style.zIndex = -1;
-    chatimg.style.height = "100vh"
-    chatimg.style.width = "35vw"
-
-    chatline.style.display = "flex";
-    chatline.style.height = "97vh";
-    chatline.style.width = "10vw";                // 글자 크기에 따라 수정 필요
-
-    chatbar.style.display = "flex";
-    chatbar.style.flexDirection = "row";
-    chatbar.style.justifyContent = "center";
-
-    todoInput.style.width = "93%";                // 채팅창크기
-
     function updateSelectOptions() {              // 조건이 없으니 항상 실행되는 함수인듯하다
       let length = todoItems.length;              // 할일 목록의 길이를 측정
       orderSelect.innerHTML = '';                 // 오더 셀렉트의 innerHTML 초기화
@@ -71,8 +51,10 @@
         itemElement.textContent = `${todoItems[i]}`;            // 텍스트 컨텐츠를 투두 아이템의 i번째 내용으로 변경, $의 의미: 안에 문자열이 포함되어있다라는걸 보여주는것
         itemElement.style.display = "flex";
         itemElement.style.justifyContent = "right";
-        itemElement.style.backgroundColor = "gray";
-        itemElement.style.color = "white";
+        itemElement.style.marginRight = "10px";
+        itemElement.style.marginLeft = "10px";
+        itemElement.style.backgroundColor = "#AFE3FD";
+        itemElement.style.color = "#501C02";
         itemElement.style.borderRadius = "5px";
         chatline.appendChild(itemElement);                          // 루트의 자식으로 p태그 넣어줘
       }
@@ -118,6 +100,35 @@
     updateSelectOptions();                              // 셀렉트옵션이라는 박스안에 글자를 넣어주는 함수이다.
 
     todoInput.style.display = "flex";
+
+    all.style.display = "flex";
+    all.style.flexDirection = "row";
+    all.style.justifyContent = "center";
+    all.style.margin = 0;
+
+    box.style.display = "flex";
+    box.style.flexDirection = "column";
+    box.style.width = "35vw";
+    box.style.height = "100vh";
+    
+    chatimg.style.position = "absolute";
+    chatimg.style.zIndex = -1;
+    chatimg.style.height = "100vh"
+    chatimg.style.width = "35vw"
+
+    chatline.style.display = "flex";
+    chatline.style.flexDirection = "column";
+    chatline.style.overflow = "wrap";
+    chatline.style.overflowY = "scroll";
+    chatline.style.alignItems = "flex-end";
+    chatline.style.height = "97vh";
+    chatline.style.width = "35vw";                // 글자 크기에 따라 수정 필요
+
+    chatbar.style.display = "flex";
+    chatbar.style.flexDirection = "row";
+    chatbar.style.justifyContent = "center";
+
+    todoInput.style.width = "93%";                // 채팅창크기
 
 
 

@@ -13,6 +13,4 @@ let html =`<!DOCTYPE html>
 </body>
 </html>`;
 
-
-
 fs.writeFile('a.html', html, () => function(){});

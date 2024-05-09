@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button id="click-button">클릭해</button>
+  </div>
+  <script>
+    const clickButton = document.getElementById('click-button');
+    clickButton.addEventListener('click', function() {              // function 이것도 콜백함수였다.
+      alert('클릭했어');                                            // 이걸 다시 안쓰겠다는 말이야
+    });
+  </script>
+</body>
+</html>
