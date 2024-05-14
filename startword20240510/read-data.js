@@ -41,12 +41,15 @@ const data = loadPokemonNames("./pokemonNames.json");
 let short = [];
 
 for (j = 0; j < data.length; j++){
-for (i=0; i<data.length; i++) {
+
+for (i = 0; i < data.length; i++) {
+
 if(data[j][0] === data[i][0]){
 short += `
   <h1>No.${[i+1]}</h1>
   <h1>${data[i]}</h1>`;
   let htmlname = data[j][0]+'start.html';
+
   fs.writeFile(htmlname , pokemonhead + short + pokemonend, () => {})
 }
 }

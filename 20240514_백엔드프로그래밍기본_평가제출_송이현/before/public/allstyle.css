@@ -1,0 +1,21 @@
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+#menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 5vh;
+  width: 70vw;
+}
+
+p {
+  margin-left: 10px;
+}

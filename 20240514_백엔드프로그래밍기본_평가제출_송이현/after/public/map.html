@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="allstyle.css">
+</head>
+<body>
+  <div id="root">
+    <div id="menu">
+      <div id="menuchildren1" onclick="location.href='index.html'">게임 소개</div>
+      <div id="menuchildren2" onclick="location.href='map.html'">맵 소개</div>
+      <div id="menuchildren3" onclick="location.href='turn.html'">턴행동 소개</div>
+      <div id="menuchildren4" onclick="location.href='battle.html'">전투 소개</div>
+      <div id="menuchildren5" onclick="location.href='character.html'">캐릭터 소개</div>
+    </div>
+    <div id="mapmain">
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/adven.png', 'width=50' , 'height=50')">모험타일</div>
+        <div>모험 카드를 1장 뽑아 사용한다.</div>
+      </div>
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/old.png' , 'width=50' , 'height=50')">유적타일</div>
+        <div>모험 카드를 1장 뽑아 사용후 1장 더 뽑아 사용한다.</div>
+      </div>
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/house.png' , 'width=50' , 'height=50')">여관타일</div>
+        <div>캐릭터의 체력을 1골드당 2체력 회복 할 수 있다.</div>
+      </div>
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/mont.png' , 'width=50' , 'height=50')">산타일</div>
+        <div>이 타일에서 전투시 공격을 받는(방어) 플레이어는 주사위 굴림을 한번 무효(낮은 숫자가 나와서 마음에 안든다면)로하고 다시 굴릴 수 있다.</div>
+      </div>
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/cave.png' , 'width=50' , 'height=50')">동굴타일</div>
+        <div>이 타일에 있는 동안 원거리 공격을 할 수 없고, 받지도 않는다.</div>
+      </div>
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/badst.png' , 'width=50' , 'height=50')">역병타일</div>
+        <div>체력을 1 잃는다.</div>
+      </div>
+      <div>
+        <div id="menuchildren1" onclick="window.open('/img/temple.png' , 'width=50' , 'height=50')">사원타일</div>
+        <div>보스가 있다면 이 타일에 들어온 플레이어는 보스와 전투합니다.</div>
+      </div>
+    </div>
+  </div>
+  <script src="allstyle.js"></script>
+</body>
+</html>

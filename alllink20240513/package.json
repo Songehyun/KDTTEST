@@ -1,0 +1,14 @@
+{
+  "name": "test20240513",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "송이현",
+  "license": "MIT",
+  "description": "이것은연습파일입니다",
+  "dependencies": {
+    "pokemon": "^3.1.0"
+  }
+}

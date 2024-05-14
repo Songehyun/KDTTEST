@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="allstyle.css">
+</head>
+<body>
+  <div id="root">
+    <div id="menu">
+      <div id="menuchildren1" onclick="location.href='index.html'">게임 소개</div>
+      <div id="menuchildren2" onclick="location.href='map.html'">맵 소개</div>
+      <div id="menuchildren3" onclick="location.href='turn.html'">턴행동 소개</div>
+      <div id="menuchildren4" onclick="location.href='battle.html'">전투 소개</div>
+      <div id="menuchildren5" onclick="location.href='character.html'">캐릭터 소개</div>
+    </div>
+    <div id="turnmain">
+      <h2>공동행동 (먼저 진행)</h2>
+      <p>1. 아이템 상점에 아이템 카드 4장을 공개한다 (공개된 카드가 있으면 위에 겹쳐서)</p>
+      <p>2. 전황 카드 1장을 펼쳐서 그 개인 턴동안 카드 효과를 적용</p>
+      <h2>개인행동</h2>
+      <p>1.  주사위 굴리기 및 이동(캐릭터 능력을 사용할 경우 이동 및 공격 불가)</p>
+      <p>2. 근접 전투 (같은 칸에 다른 플레이어와 함께 있을 수 없으며 전투가 발생한다)</p>
+      <p>3.  아이템 구매 및 장비 변경 (아이템 장비는 최대 3개까지 가능하며 3개가 장착되어 있는 상태에서 더 장착시 1개를 버리고 그 위치에 장착)</p>
+      <p>4.  원하는 플레이어와 아이템 카드 거래 신청 (선택)<br>(거래는 아이템, 골드를 거래 가능하고 일방적으로 줄 수도 있다 보물은 거래 불가능)</p>
+      <p>5. 원거리 전투 (원거리 전투는 플레이어 행동 중 어느 때라도 실행 할 수 있다)</p>
+      <p>6. 소모품 사용 (소모품 사용은 플레이어 행동 중 어느 때라도 실행 할 수 있다.)</p>
+    </div>
+  </div>
+  <script src="allstyle.js"></script>
+</body>
+</html>
