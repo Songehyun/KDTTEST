@@ -20,3 +20,6 @@ function loadserver(url, fliepath, contenttype, req , res){
 };
 
 module.exports = loadserver;
+
+
+// 예제 코드 : loadserver("/", "./public/index.html", "text/html; charset=utf-8", request, response);

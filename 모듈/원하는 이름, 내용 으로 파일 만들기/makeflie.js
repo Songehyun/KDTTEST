@@ -11,3 +11,6 @@ const fs = require('fs');
   }
 
   module.exports = makeflie;
+
+
+// 예제 코드 const flieurl = request.url;  makeflie(flieurl)
