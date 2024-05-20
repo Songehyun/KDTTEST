@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="style.js"></script>
+  <form action="/test" method="post">
+    <div id="root">
+      <div>
+        <div>
+          <p>나의 이름</p>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="name" placeholder="나의 이름을 작성하세요. ex) 송이현">
+          </div>
+          <div id="nameyn">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>비밀번호</p>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="password" placeholder="정자이름과 핸드폰 뒷자리 4자리를 작성해주세요. ex) 송이현2805">
+          </div>
+          <div id="passwordyn">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>비밀번호 확인</p>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="passwordre" placeholder="위 비밀번호 입력과 동일하게 다시한번 작성해주세요.">
+          </div>
+          <div id="passwordreyn">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>이메일 주소</p>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="email" placeholder="이메일의 주소 양식에 맞게 작성해주세요.">
+          </div>
+          <div id="emailyn">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>핸드폰 번호</p>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="phone" placeholder="핸드폰 번호 양식에 맞게 작성해주세요.">
+          </div>
+          <div id="phoneyn">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>작성 완료</p>
+        </div>
+        <div>
+          <div>
+            <button type="submit" id="allno">아직 모든 입력란이 유효하지 않습니다.</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
